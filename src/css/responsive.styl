@@ -1,0 +1,39 @@
+@media (min-width 992px)
+	// this handles the vertical centering of the
+	// description text for the images
+	.row.equal-height
+		overflow hidden
+		font-size 0
+
+		& > [class*="col-"]
+			font-size 1rem
+			position relative
+			float none
+			display inline-block
+			vertical-align middle
+
+@media (max-width 992px)
+	.row .text
+		display inline-block
+		margin 1em 0
+
+@media (max-width 768px)
+	.module-box
+		max-width 350px
+		margin-left auto
+		margin-right auto
+
+@media (max-width 652px)
+	// handles notify going all spastic when it needs to wrap
+	.notify
+		height 100px
+
+		.input-group
+			display block
+			margin-left 0
+			margin-top 5px
+
+@media (max-width 577px)
+	// this handles there being no padding under the Try! button
+	.hero h2
+		margin-bottom 1em

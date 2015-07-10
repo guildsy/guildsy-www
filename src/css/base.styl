@@ -1,0 +1,202 @@
+@import "colours"
+
+.fluid
+	width 100%
+
+.absolute-vert-center
+	position absolute
+	top 50%
+	transform translateY(-50%)
+
+html, body
+	font-size 24px !important
+	font-family 'Roboto'
+	font-weight 300
+
+a,
+a:hover,
+a:visited,
+a:focus
+	color #333
+	text-decoration none
+
+h1, h2
+	font-weight 700
+
+h1
+	opacity 0.8
+	font-size 1.5em
+
+h2
+	opacity 0.7
+	font-size 1em
+
+section
+	position relative
+
+input
+	outline none
+	padding 0 15px
+	border-radius 4px
+	border none
+
+.section-heading
+	text-align center
+
+.image
+	width 100%
+	height 300px
+	background-color secondary1Color
+	border-radius 4px
+
+.row
+	margin-bottom 2rem
+
+.button
+	display inline-block
+	text-align center
+	cursor pointer
+	white-space nowrap
+	user-select none
+	border 1px solid transparent
+	border-radius 4px
+	padding 6px 12px
+	background-color secondary1Color
+	color #fff !important
+	font-size 0.75rem
+	vertical-align bottom
+	outline none
+
+	&:hover
+		background-color @background-color - 10%
+	&:active
+		background-color @background-color - 20%
+
+	&.big
+		font-size 1rem
+	&.bigger
+		font-size 1.25rem
+
+.input-group
+	height 40px
+	font-size 0
+	display inline-block
+
+	input
+		font-size 1rem
+		height 100%
+		border-top-right-radius 0
+		border-bottom-right-radius 0
+		width 250px
+
+	.button
+		height 100%
+		border-top-left-radius 0
+		border-bottom-left-radius 0
+
+
+.hero
+	text-align center
+	font-size 1.5rem
+	height 80vh
+	min-height 640px
+	background url(https://download.unsplash.com/photo-1429547584745-d8bec594c82e) no-repeat center center
+	background-size cover
+	color white
+
+	&:before
+		position absolute
+		content ' '
+		top 0
+		left 0
+		right 0
+		bottom 0
+		display block
+		background-color primary1Color
+		opacity 0.7
+
+	.fluid
+		left 1em
+		right 1em
+		width auto
+
+	.super-heading
+		font-size 2.5em
+		font-weight 300
+		margin-top 0
+
+	h2
+		margin-bottom 3em
+
+.notify
+	min-height 80px
+	background-color grey300
+	text-align center
+
+	.input-group
+		margin-left 20px
+
+.forum
+	p
+		margin 0 !important
+
+.modules
+	background-color grey300
+
+	.modules-list
+		margin-bottom 1em
+
+	.module-box
+		background-color grey400
+		border 1px solid
+		border-color @background-color - 10%
+		border-radius 4px
+		padding 10px
+		margin-bottom 1em
+		cursor pointer
+
+		&:hover, &.js-active
+			background-color @background-color - 10%
+
+		img
+			width 50px
+			height 50px
+
+		span
+			vertical-align middle
+			margin-left 0.5em
+
+	.module-active
+		background-color grey400
+		margin-bottom 2em
+		padding 1em
+
+		// hide all the tabs by default
+		& > div
+			display none
+
+		.row:last-child
+			margin-bottom 0
+
+.footer
+	text-align center
+	padding 1em
+
+	ul
+		padding 0
+		margin 0
+
+	li
+		display inline-block
+		margin 0 5px
+
+	.company
+		margin 0.75em 0 0
+
+	.button
+		margin-bottom 1em
+
+	a:hover
+		color primary1Color
+
+@import "responsive"
